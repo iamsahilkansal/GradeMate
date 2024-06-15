@@ -45,7 +45,6 @@ if(selected == "GPA Calculation"):
     grade_dict = {'S': 10, 'A': 9, 'B': 8, 'C': 7, 'D': 6, 'E': 5, 'F': 0}
     col1, col2 = st.columns(2)
     with col1:
-        st.write("##")
         st.write("Enter the Number of Subjects")
     with col2:
         n = st.number_input("", min_value=0, step=1, value=0)
@@ -108,7 +107,6 @@ if(selected == "Analysis"):
     st.title(f"{selected}")
     col1, col2 = st.columns(2)
     with col1:
-        st.write("##")
         st.write("Enter the Number of Semesters Completed")
     with col2:
         n = st.number_input("", min_value=0, max_value=8, step=1, value=0)
