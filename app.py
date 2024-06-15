@@ -83,7 +83,7 @@ if(selected == "CGPA Calculation"):
     with col2:
         g = st.number_input("This Semester GPA", min_value=0.0, step=0.5, value=0.0)
     
-    if(completed+sem>0):
+    if st.button("Calculate CGPA") and (completed+sem>0):
         st.write("New CGPA is: ", round((completed*cg +sem*g)/(completed+sem), 2))
     else:
         st.warning("Select Correct Number of Credits", icon="⚠️")
@@ -97,7 +97,8 @@ if(selected == "GPA for 9"):
         cg = st.number_input("Current CGPA", min_value=0.0, max_value=10.0, step=0.5, value=0.0)
     with col3:
         sem = st.number_input("Credits Opted this semester", min_value=0.0, step=0.5, value=0.0)
-    if(sem>0):
+
+    if st.button("Calculate CGPA") and (sem>0):    
         ans=(9.00*(completed+sem)-completed*cg)/sem
         st.write("GPA Required to be 9 pointer is: ", round(ans, 2))
     else:
