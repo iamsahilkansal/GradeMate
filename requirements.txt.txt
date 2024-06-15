@@ -1,0 +1,7 @@
+streamlet
+streamlit_option_menu
+matplotlib.pyplot
+plotly.express
+numpy
+pandas
+math
