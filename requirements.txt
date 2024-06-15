@@ -1,4 +1,4 @@
-streamlet
+streamlit
 streamlit_option_menu
 matplotlib.pyplot
 plotly.express
