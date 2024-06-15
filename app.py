@@ -142,7 +142,7 @@ if(selected == "Analysis"):
             st.warning("Select Correct Number of Credits", icon="⚠️")
     type = st.selectbox("Select the analysis type", ("Sem-GPA Analysis", "Sem-CGPA Analysis"))    
 
-    if st.button("Analyse"):
+    if st.button("Analyse") and n>0:
         if(type=="Sem-GPA Analysis"):
             data = {"Semester": ["Semester " + str(i + 1) for i in range(n)], "GPA": gpa}
             df = pd.DataFrame(data)
@@ -160,3 +160,5 @@ if(selected == "Analysis"):
             fig.update_yaxes(range=[math.floor(min(cgpa)), 10])
         
         st.plotly_chart(fig)
+    else:
+        st.warning("Select Correct Number of Semesters", icon="⚠️")
